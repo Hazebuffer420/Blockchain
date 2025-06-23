@@ -1,0 +1,299 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "betragWei",
+						"type": "uint256"
+					}
+				],
+				"name": "Auszahlung",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "betragWei",
+						"type": "uint256"
+					}
+				],
+				"name": "Einzahlung",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "kWh",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "betragWei",
+						"type": "uint256"
+					}
+				],
+				"name": "LadevorgangGestartet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auszahlen",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "benutzerAuszahlen",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "berechtigt",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "betreiber",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "einzahlen",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					}
+				],
+				"name": "guthabenInEth",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethGanz",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ethDezimal",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "ladeHistorie",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "kWh",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "betragWei",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "zeitpunkt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ladeHistorieAnzahl",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "kWh",
+						"type": "uint256"
+					}
+				],
+				"name": "ladeStarten",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "preisProKWhWei",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "nutzer",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					}
+				],
+				"name": "setBerechtigung",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "preisInEth",
+						"type": "uint256"
+					}
+				],
+				"name": "setPreisProKWh",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ChargeChain/LadeSaeule.sol": "LadeSaeule"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ChargeChain/LadeSaeule.sol": {
+			"keccak256": "0xccc236a18b59b2576bde6f4e7d3fea27236341ef28c1f7e244bceaa6471be751",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db70c908ba620d140dce6523ed109a7c64cbecf7cfc1c233c6b4b4a8ff82ab03",
+				"dweb:/ipfs/QmdHbqnKZguZK3Sjf4srJfYgHmJFb33Mco5FF4op3HHVga"
+			]
+		}
+	},
+	"version": 1
+}
